@@ -1,0 +1,65 @@
+<div class="container">
+    <form [formGroup]="addFlight1" (ngSubmit)="onSubmit()">
+        <br>
+        <div class="form-group">
+            <label for="flightName">ENTER FLIGHT NAME</label>
+            <input formControlName="flightName" type="text" class="form-control" id="flightName" placeholder="FlightName"/>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="source">ENTER SOURCE</label>
+            <input formControlName="source" type="text" class="form-control" id="source" placeholder="Source"/>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="destination">ENTER DESTINATION</label>
+            <input formControlName="destination" type="text" class="form-control" id="destination" placeholder="Destination"/>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="departureDate">ENTER DEPARTURE DATE</label>
+            <input formControlName="departureDate" type="date" class="form-control" id="departureDate" placeholder="DepartureDate"/>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="departureDate">ENTER DEPARTURE TIME</label>
+            <input formControlName="departureTime" type="text" class="form-control" id="departureTime" placeholder="DepartureTime: 00:00"/>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="arrival">ENTER ARRIVAL DATE</label>
+            <input formControlName="arrivalDate" type="date" class="form-control" id="arrivalDate" placeholder="ArrivalDate"/>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="departure">ENTER ARRIVAL TIME</label>
+            <input formControlName="arrivalTime" type="text" class="form-control" id="arrivalTime" placeholder="ArrivalTime: 00:00"/>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="economicSeats">ENTER ECONOMY SEATS</label>
+            <input formControlName="economicSeats" type="number" class="form-control" id="economicSeats" placeholder="EconomicSeats"/>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="businessSeats">ENTER BUSINESS SEATS</label>
+            <input formControlName="businessSeats" type="number" class="form-control" id="businessSeats" placeholder="BusinessSeats"/>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="economyCost">ENTER ECONOMY COST</label>
+            <input formControlName="economyCost" type="number" class="form-control" id="economyCost" placeholder="EconomyCost"/>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="businessCost">ENTER BUSINESS COST</label>
+            <input formControlName="businessCost" type="number" class="form-control" id="businessCost" placeholder="BusinessCost"/>
+        </div>
+        <br>
+
+        <div [hidden] = "added" style="color: green;"><h2>Flight added </h2></div>
+
+        <button class="btn btn-success">ADD FLIGHT</button>
+    </form>
+   
+    </div>

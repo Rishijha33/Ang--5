@@ -1,0 +1,45 @@
+<div><app-user-nav></app-user-nav></div>
+
+<div class="container">
+    <form [formGroup]="paymentForm"  (ngSubmit)="onSubmit()">
+        <br>
+        <div class="form-group">
+            <label for="bookingId">Booking ID</label>
+            <br>
+            <label class="form-control" for="bookingId">{{bookingId}}</label>
+        </div>
+        <br>
+
+
+        <div class="form-group">
+            <label for="cardHolderName">Card Holder Name</label>
+            <input formControlName="cardHolderName" type="text" class="form-control" id="cardHolderName" placeholder="Card Holder Name" />
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input formControlName="cardNumber" type="text" class="form-control" id="cardNumber" placeholder="Card Number" />
+        </div>
+        <br>
+        <div class="form-group">
+            <label >CVV</label>
+            <input  type="number" class="form-control" placeholder="CVV" />
+        </div>
+
+        <div class="form-group">
+            <label >Expiry date</label>
+            <input type="text" class="form-control" placeholder="MM/yy" />
+        </div>
+
+        <div><label class="form-group" for="totalCost">Amount </label>
+            <label class="form-group" for="totalCost">{{totalCost}}</label>
+        </div>
+      
+  
+        <button class="btn btn-success" type="submit" id="makePayment">PAY</button>
+
+    </form>
+    <!-- <button class="btn btn-success" (click)="goBack()">Back to login</button> -->
+    <!-- name, bookingid, gender, age, seat no. -->
+</div>

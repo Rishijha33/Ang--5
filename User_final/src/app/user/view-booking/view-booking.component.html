@@ -1,0 +1,45 @@
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Id</th>
+                <th>flightId</th>
+                <th>userId</th>
+                <th>Booking Date</th>    
+                <th>Class</th>    
+                <th>Status</th>    
+                <th>Number of Passengers</th>    
+                <th>Total Cost</th>    
+                <th> </th> 
+                  
+                                
+            </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let b of bookingList;">  
+                <td> {{b.user.firstName}} </td>            
+                <td> {{b.bookingId}} </td>
+                <td> {{b.flight.flightId}} </td>
+                <td> {{b.user.userId}} </td>
+                <td> {{b.bookingDate}} </td>     
+                <td> {{b.travelClass}} </td>     
+                <td> {{b.bookingStatus}} </td>  
+                <td> {{b.noOfPassengers}} </td>     
+                <td> {{b.totalCost}} </td>   
+                <td><button class="btn btn-danger" (click) = "cancelBooking(b.bookingId)">Cancel Booking</button></td>                             
+               
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- bookingId:number=0;
+flight: Flight;
+user: User;
+bookingDate:string="";
+travelClass: string="";
+bookingStatus: string="";
+noOfPassengers: number=0;
+totalCost: number=0;
+refundAmount: number=0; -->

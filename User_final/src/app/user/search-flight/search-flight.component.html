@@ -1,0 +1,173 @@
+<body>
+    
+
+
+
+   <div [hidden]="!flightSearched">
+        <form [formGroup]="searchFlight"  class="login-form" (ngSubmit)="onSearch()">
+            <br>
+            <div class="form-group">
+                <label for="source">FLYING FROM</label>
+                <input formControlName="source" type="text" class="form-control" id="source" placeholder="SOURCE" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="destination">FLYING TO</label>
+                <input formControlName="destination" type="text" class="form-control" id="destination"
+                    placeholder="DESTINATION" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="departureDate">ENTER DEPARTURE DATE</label>
+                <input formControlName="departureDate" type="date" class="form-control" id="departureDate"
+                    placeholder="DEPARTURE DATE" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="noOfPassengers">NO OF PASSENGERS</label>
+                <input formControlName="noOfPassengers" type="number" class="form-control" id="noOfPassengers"
+                    placeholder="noOfPassengers" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="travelClass">TRAVEL CLASS</label>
+                <input formControlName="travelClass" type="text" class="form-control" id="travelClass"
+                    placeholder="Economy OR Business" />
+                   
+            </div>
+            <br>
+    
+            <button class="btn btn-success">SEARCH FLIGHT</button>
+        </form>
+    </div>
+    
+    
+    <div *ngIf="sf.travelClass=='economy'" class="container mt-2">
+        <p>display-flights works for economy CLasss!</p>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>FLIGHT ID</th>
+                    <th>FLIGHT NAME</th>
+                    <th>SOURCE</th>
+                    <th>DESTINATION</th>
+                    <th>DEPARTURE DATE & TIME</th>
+                    <th>ARRIVAL DATE & TIME</th>
+                    <th>ECONOMY SEATS</th>
+                    <th>ECONOMY SEAT COST</th>
+                    <th>Book Flight</th>
+                  
+                </tr>
+            </thead>
+         
+            <tbody>
+                
+                <tr *ngFor="let flight of flightList">
+                    <td>{{flight.flightId}}</td>
+                    <td>{{flight.flightName}}</td>
+                    <td>{{flight.source}}</td>
+                    <td>{{flight.destination}}</td>
+                    <td>{{flight.departureDate}} {{flight.departureTime}}</td>
+                    <td>{{flight.arrivalDate}} {{flight.arrivalTime}}</td>
+                    <td>{{flight.economicSeats}}</td>
+                    <td>{{flight.economyCost}}</td>
+                   <td><button class="btn btn-success"  (click)="getDetails(flight.flightId)">Book Now</button></td> 
+    
+                    
+                       
+                </tr>
+            
+            </tbody>
+       
+        </table>
+    
+    </div>
+    
+    
+    
+    
+    <div *ngIf="sf.travelClass=='business'" class="container mt-2">
+        <p>display-flights works for business CLasss!</p>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>FLIGHT ID</th>
+                    <th>FLIGHT NAME</th>
+                    <th>SOURCE</th>
+                    <th>DESTINATION</th>
+                    <th>DEPARTURE DATE & TIME</th>
+                    <th>ARRIVAL DATE & TIME</th>
+                    <th>BUSINESS SEATS</th>
+                    <th>BUSINESS SEAT COST</th>
+                    <th>Book Flight</th>
+                  
+                </tr>
+            </thead>
+         
+            <tbody>
+                
+                <tr *ngFor="let flight of flightList; let i = index;">
+                    <td>{{flight.flightId}}</td>
+                    <td>{{flight.flightName}}</td>
+                    <td>{{flight.source}}</td>
+                    <td>{{flight.destination}}</td>
+                    <td>{{flight.departureDate}} {{flight.departureTime}}</td>
+                    <td>{{flight.arrivalDate}} {{flight.arrivalTime}}</td>
+                    <td>{{flight.businessSeats}}</td>
+                    <td>{{flight.businessCost}}</td>
+                    <td><button class="btn btn-success btn-sm"  (click)="getDetails(flight.flightId)">Book Now</button></td> 
+                    
+                       
+                </tr>
+            
+            </tbody>
+       
+        </table>
+    
+    </div>
+    
+ 
+</body>
+<!-- <div class="container">
+    <form [formGroup]="passengerForm"  (ngSubmit)="onSubmit()">
+        <br>
+        <div class="form-group">
+            <label for="bookingId">Booking ID</label>
+            <input formControlName="bookingId" type="number" class="form-control" id="bookingId"
+                placeholder="Booking Id" />
+        </div>
+        <br>
+
+
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <input formControlName="Name" type="text" class="form-control" id="Name" placeholder="Name" />
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input formControlName="age" type="number" class="form-control" id="age" placeholder="age" />
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select name="gender" formControlName="gender">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+        </div>
+        <br>
+
+
+        <div class="form-group">
+            <label for="seatNo">Seat Number</label>
+            <input formControlName="seatNo" type="String" class="form-control" id="seatNo" placeholder="Seat No" />
+        </div>
+        <br>
+        <button class="btn btn-success" type="submit" id="addPassengers">Go For Payment</button>
+
+    </form>
+     <button class="btn btn-success" (click)="goBack()">Back to login</button> -->
+    <!-- name, bookingid, gender, age, seat no. 
+</div> -->

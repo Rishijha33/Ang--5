@@ -1,0 +1,39 @@
+<!-- 
+<mat-toolbar color="primary" class="mat-elevation-z6">
+    <mat-icon>flight</mat-icon> Take OFF
+    <div class="spacer"></div>
+    <a>
+        {{userName}}  
+    </a> 
+    <button mat-button  class="btn btn-primary" (click) = "dashboard()">
+        DashBoard
+    </button>
+
+    <button  mat-button class="btn btn-primary" (click) = "searchFlight()">
+        Search Flights 
+    </button>
+    <button  mat-button  class="btn btn-primary" (click) = "viewBooking()">
+        View Booking
+    </button>
+
+ 
+    <button  mat-raised-button color="accent" class="btn btn-primary" (click) = logOut()>
+     Logout
+     </button> 
+ </mat-toolbar> -->
+
+
+
+
+ <mat-toolbar color="primary" class="mat-elevation-z6">
+    <span><mat-icon>flight</mat-icon> TakeOff</span>
+    <div class="spacer"></div>
+    <a mat-button class="btn btn-primary" >Home</a>
+    <a mat-button class="btn btn-primary"   >About Us</a>
+    <a mat-button class="btn btn-primary"    >Contact Us</a>
+    <a mat-button class="btn btn-primary"   >Login</a>
+    <a mat-raised-button class="btn btn-primary" color="accent"   >Sign Up</a>
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>

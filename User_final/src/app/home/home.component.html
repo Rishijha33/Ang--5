@@ -1,0 +1,38 @@
+
+<div class="box">
+    <app-home-dashboard></app-home-dashboard>
+
+<div class="booking-form-box">
+  <div class="booking-form">
+
+   
+      <label>Flying Form</label>
+      <input type="text" class="form-control" placeholder="City or Airport"/>
+      <label>Flying To</label>
+      <input type="text" class="form-control" placeholder="City or Airport"/>
+      
+      <div class="input-grp">
+          <label>Departing</label>
+          <input type="date" class="form-control select-date"/>
+      </div>
+      <div class="input-grp">
+          <label>Return</label>
+          <input type="date" class="form-control select-date"/>
+      </div>
+      <div class="input-grp">
+          <label>Adults</label>
+          <input type="number" class="form-control" value="0" />
+      </div>
+      <div class="input-grp">
+          <label>Children</label>
+          <input type="number" class="form-control" value="0" />
+      </div>
+      <div class="input-grp">
+          <label>Travel Class</label>
+          <select class="custom-select">
+              <option value="1">Economy Class</option>
+              <option value="2">Business Class</option>
+          </select>
+      </div>
+    </div>
+<router-outlet></router-outlet>
