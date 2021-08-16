@@ -8,13 +8,24 @@
             <br>
             <div class="form-group">
                 <label for="source">FLYING FROM</label>
-                <input formControlName="source" type="text" class="form-control" id="source" placeholder="SOURCE" />
+                <select class="form-control"  id="source"  name="title"  formControlName="source" placeholder="SOURCE">
+                    <option value="Bhopal">Bhopal</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="Chennai">Chennai</option>
+                </select>
             </div>
             <br>
             <div class="form-group">
                 <label for="destination">FLYING TO</label>
-                <input formControlName="destination" type="text" class="form-control" id="destination"
-                    placeholder="DESTINATION" />
+                    <select class="form-control"  id="destination"  name="title"  formControlName="destination" placeholder="DESTINATION">
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Chennai">Chennai</option>
+                    </select>
             </div>
             <br>
             <div class="form-group">
@@ -31,8 +42,11 @@
             <br>
             <div class="form-group">
                 <label for="travelClass">TRAVEL CLASS</label>
-                <input formControlName="travelClass" type="text" class="form-control" id="travelClass"
-                    placeholder="Economy OR Business" />
+                    <select class="form-control"  id="travelClass"  name="title"  formControlName="travelClass" placeholder="Economy OR Business">
+                        <option value="economy">Economy</option>
+                        <option value="business">Business</option>
+                    </select>
+                    
                    
             </div>
             <br>

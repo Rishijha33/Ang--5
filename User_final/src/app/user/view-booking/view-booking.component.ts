@@ -45,6 +45,8 @@ export class ViewBookingComponent implements OnInit {
       console.log(this.msg);
       location.reload();
     });
+
+    alert(this.msg)
   }
 
 
